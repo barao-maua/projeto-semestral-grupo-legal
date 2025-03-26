@@ -20,5 +20,5 @@ from paginas import views as paginas_views
 
 urlpatterns = [
 path('admin/', admin.site.urls),
-path('', paginas_views.home, name='home'),
+path('', paginas_views.homepage, name='homepage'),
 ]

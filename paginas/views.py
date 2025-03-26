@@ -1,4 +1,4 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-def home(request):
-    return HttpResponse('Bem-vindo à página inicial!')
+def homepage(request):
+    return render(request, 'homepage.html')
