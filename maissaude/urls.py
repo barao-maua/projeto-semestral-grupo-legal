@@ -15,8 +15,34 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.urls import path, include
+from django.views.generic import RedirectView
+from django.conf.urls.static import static 
+from django.conf import settings
+from django.shortcuts import redirect
+from django.http import HttpResponse
 from django.urls import path
+from paginas import views
+from maissaude import views
+
+def home(request):
+    return HttpResponse("<h1>Bem-vindo ao MaisSaúde!</h1>")
+
+def home_redirect(request):
+    return redirect('/paginas/')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('paginas/', include('paginas.urls')),
+    path('', home, name='home'),  
 ]
+urlpatterns += [
+    path('', views.home, name='home'), 
+]
+
+
+urlpatterns += [
+    path('', RedirectView.as_view(url='/paginas/')),
+]
+
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
