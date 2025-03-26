@@ -1,0 +1,15 @@
+Listagem de caminhos de pasta para o volume Windows
+O número de série do volume é 6E25-C6B3
+C:.
++---.qodo
++---maissaude
+¦   +---__pycache__
++---media
++---paginas
+    +---migrations
+    ¦   +---__pycache__
+    +---templates
+    ¦   +---.qodo
+    ¦   +---componentes
+    ¦   +---components
+    +---__pycache__
