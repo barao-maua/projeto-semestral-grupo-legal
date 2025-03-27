@@ -5,9 +5,9 @@
     <img src="/media/logo.png" alt="logo" id="eulogo">
 
     <ul class="nav-list">
-        <li><a href="/">Página Inicial</a></li>
+        <li><a href="{% url 'index' %}">Página Inicial</a></li>
         <li><a href ="/">Dúvidas</a></li>
-        <li><a href ="/">Contato</a></li>
+        <li><a href="{% url 'login' %}">Entrar</a></li>
         <li><a href ="/">Cadastre-se</a></li>
     </ul>
   </nav>
