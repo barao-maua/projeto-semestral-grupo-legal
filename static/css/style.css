@@ -3,28 +3,97 @@
 header {
     position: relative;
     background: linear-gradient(to right, #0092AC, #69E7FD);
-    color: white; /* Cor do texto */
-    padding: 20px;
-    text-align: start;
-    font-family: 'Montserrat';
+    color: white;
+    padding: 10px 20px;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
+#eulogo {
+    max-height: 5vh;
+    width: auto;
 }
-li {
-    font-size: 38;
-    display: inline;
-    margin-right: 15px; /* Espaço entre os itens */
-}
-nav{
-    padding-left: 15%;
 
+nav {
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
 }
-#logo {
-    max-width: 100%;  /* A imagem nunca ultrapassará a largura do header */
-    max-height: 100%; /* A imagem nunca ultrapassará a altura do header */
-    object-fit: contain; /* Garante que a imagem se ajuste sem deformar */
-    position: absolute; /* Posiciona a imagem em relação ao header */
-    top: 25%;
-    left: 5%;
-    width: 10px;
-    height: auto; /* Mantém a proporção */
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li {
+    margin-left: 30px;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.nav-list li a:hover {
+    opacity: 0.7;
+}
+
+.button-container {
+    display: flex;
+    gap: 20px;
+}
+
+.button-container button {
+    background-color: white;
+    color: #878787;
+    border: 2px solid #878787;
+    border-radius: 30px;
+    padding: 8px 60px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 20px;
+}
+
+.button-container button span {
+    margin-left: 0;
+    transition: margin-left 0.3s;
+}
+
+.button-container button:hover {
+    background-color: #878787;
+    color: white;
+}
+
+.button-container button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 100%;
+    background-color: #878787;
+    border-top-right-radius: 10px;
+    transition: width 0.3s ease-in-out;
+}
+
+.button-container button:hover:before {
+    width: 35px;
+}
+
+.button-container button:hover span {
+    margin-left: 10px;
 }
