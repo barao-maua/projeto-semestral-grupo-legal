@@ -97,3 +97,17 @@ nav {
 .button-container button:hover span {
     margin-left: 10px;
 }
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    background: linear-gradient(to right, #0092AC, #69E7FD);
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+}
+
+
