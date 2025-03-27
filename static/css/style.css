@@ -1,6 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-body {
-    background-color: #f4f4f4; /* Cor de fundo */
-    font-family: Arial, sans-serif; /* Fonte do texto */
-    color: #333;
+header {
+    position: relative;
+    background: linear-gradient(to right, #0092AC, #69E7FD);
+    color: white; /* Cor do texto */
+    padding: 20px;
+    text-align: start;
+    font-family: 'Montserrat';
+
+}
+li {
+    font-size: 38;
+    display: inline;
+    margin-right: 15px; /* Espaço entre os itens */
+}
+nav{
+    padding-left: 15%;
+
+}
+#logo {
+    max-width: 100%;  /* A imagem nunca ultrapassará a largura do header */
+    max-height: 100%; /* A imagem nunca ultrapassará a altura do header */
+    object-fit: contain; /* Garante que a imagem se ajuste sem deformar */
+    position: absolute; /* Posiciona a imagem em relação ao header */
+    top: 25%;
+    left: 5%;
+    width: 10px;
+    height: auto; /* Mantém a proporção */
 }
