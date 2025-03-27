@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <img src="/media/logo.png" alt="logo" id="eulogo" />
+        <ul class="nav-list">
+          <li><a href="/">Página Inicial</a></li>
+          <li><a href="/">Dúvidas</a></li>
+          <li><a href="/">Contato</a></li>
+          <li><a href="/cadastro/">Cadastre-se</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container">
+      <h2>Cadastro</h2>
+      <form action="#" method="POST">
+        {% csrf_token %}
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required />
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" required />
+
+        <button type="submit">Cadastrar</button>
+      </form>
+    </div>
+  </body>
+</html>
