@@ -1,38 +1,56 @@
 {% extends 'base.html' %}
-
 {% load static %}
 
-{% block content %}  
+{% block content %}
 <div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-        <div class="swiper-slide">
-            <img src="/media/image1.png" alt="Imagem 1">
-        </div>
-        <div class="swiper-slide">
-            <img src="/media/image2.png" alt="Imagem 2">
-        </div>
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <img src="/media/image1.png" alt="Imagem 1">
     </div>
-    <div class="swiper-pagination"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
+    <div class="swiper-slide">
+      <img src="/media/image2.png" alt="Imagem 2">
+    </div>
+  </div>
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
 </div>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
-    var swiper = new Swiper('.mySwiper', {
-        loop: true,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        autoplay: {
-            delay: 3000,
-        },
-    });
+  var swiper = new Swiper('.mySwiper', {
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    autoplay: {
+      delay: 3000,
+    },
+  });
 </script>
+<div style="margin-top: 75px; margin-bottom: 150px; width: 100%; height: 420px; background-color: #C8EAF4;">
+  <div style="display: flex; justify-content: center; height: 100%;">
+    <h1 style="margin-top: 50px;">
+      Serviços
+    </h1>
+    <div style="margin-top: 50px; display: flex; justify-content: center;">
+      <nav>
+      <ul>
+        <li>
+          <div class="button-container" style="margin-right: 200px; align-items: center;">
+              <button>Área do Cliente</button>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    </div>
+    
+  </div>
+</div>
 
 {% endblock %}

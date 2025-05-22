@@ -1,18 +1,29 @@
 {% load static %}
 
 <header>
-  <nav>
-    <img src="/media/logo.png" alt="logo" id="eulogo" />
-
-    <ul class="nav-list">
-      <li><a href="{% url 'index' %}">Página Inicial</a></li>
-      <li><a href="/">Dúvidas</a></li>
-      <li><a href="{% url 'login' %}">Entrar</a></li>
-      <li><a href="{% url 'cadastro' %}">Cadastre-se</a></li>
-    </ul>
-  </nav>
-  <div class="button-container">
-    <button>Área do Cliente</button>
-    <button>Área do Colaborador</button>
+  <div style="width: 100%">
+    <div style= "height: 70px; background: #F6F2F1; display: flex; justify-content: space-between; align-items: center;">
+      <div style="margin-left: 200px; margin-top: 20px; align-items: center; justify-content: center;">
+        </a href="{% url 'index' %}" >
+          <img src="/media/logo.png" alt="logo" id="eulogo">"
+        </a>
+      </div>      
+      <div class="button-container" style="margin-right: 200px; align-items: center;">
+        <button>Área do Cliente</button>
+        <button>Área do Colaborador</button>
+      </div>
+    </div>
+    <div style="display: flex; justify-content: space-between; align-items: center; height: 55px;">
+      <div style="align-items: center; margin-left: 200px;">
+        <nav style="display: flex; justify-content: center;align-items: center;">
+          <ul class="nav-list" style="display: flex; gap: 30px; align-items: center;">
+            <li><a href="{% url 'index' %}">Página Inicial</a></li>
+            <li><a href="/">Dúvidas</a></li>
+            <li><a href="{% url 'login' %}">Entrar</a></li>
+            <li><a href="{% url 'cadastro' %}">Cadastre-se</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
   </div>
 </header>

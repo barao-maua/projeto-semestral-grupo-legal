@@ -21,8 +21,12 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
+path('login/', paginas_views.login_view, name='login'),
 path('admin/', admin.site.urls),
 path('', paginas_views.index, name='index'),
-path('login/', paginas_views.login, name='login'),
-path('cadastro/', paginas_views.cadastro_view, name='cadastro')
+path('', include("paginas.urls")),
+path('cadastro/', paginas_views.cadastro_view, name='cadastro'),
+path('accounts/', include("django.contrib.auth.urls")),
+path('accounts/register/', paginas_views.register, name='cadastro'),
+path('dashboard/', paginas_views.dashboard_main, name='dashboard_main'),
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
