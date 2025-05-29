@@ -2,35 +2,71 @@
 {% load static %}
 
 {% block content %}
-<div style="display: flex; justify-content: center; background-color: #F8F9FF; width: 550px; height: 500px; border-radius: 10px; font-family: 'Montserrat', sans-serif;">
-    <h1 style="color: #0F90B5; font-weight: bold;">Cadastro</h1>
-    <form method="POST" action="">
-        {% csrf_token %}
-
-        <label class="labelform"  for="first_name">Nome:</label>
-        <input class="inputform" type="text" id="first_name" name="first_name" required>
-
-        <label class="labelform" for="last_name">Sobrenome:</label>
-        <input class="inputform" type="text" id="last_name" name="last_name" required>
-
-        <label class="labelform" for="email">Email:</label>
-        <input class="inputform" type="email" id="email" name="email" required>
-
-        <label class="labelform" for="password">Senha:</label>
-        <input class="inputform" type="password" id="password" name="password" required>
-
-        <label class="labelform" for="birth_date">Data de Nascimento:</label>
-        <input class="inputform" type="date" id="birth_date" name="birth_date" required>
-
-        <label for="gender">Gênero:</label>
-        <select id="gender" name="gender" required>
-            <option value="">Selecione</option>
-            <option value="M">Masculino</option>
-            <option value="F">Feminino</option>
-            <option value="O">Outro</option>
-        </select>
-
-        <button type="submit">Cadastrar</button>
-    </form>
+<div style="width: 100vw; height: 80vh; display: flex; justify-content: center;">
+    <div id="painel" style="background: linear-gradient(to top, #F8F9FF 85%, #0F90B5 15%);">
+        <div style="">
+            <img src="/media/logo_white.png" alt="logo" style="height: 40px;">
+        </div>
+        <div style="margin-top: 30px; display: flex; justify-content: space-evenly">
+            <h1 style="color: #0F90B5; font-weight: bold;">Cadastre-se</h1>
+        </div>
+        <div class="line" style="width: 480px; border: solid 2px; margin: 10px; border-color: #0F90B5;">
+        </div>
+        <div>
+            <form method="POST" action="">
+            {% csrf_token %}
+            <div class="labeldiv">
+                <label class="labelform" for="email">Email:</label>
+                <input class="inputform" type="email" id="email" name="email" required>
+            </div>
+            <div style="display: flex; flex-direction: row;">
+                <div class="labeldiv">   
+                    <label class="labelform" for="password">Senha:</label>
+                    <input class="inputform" type="password" id="password" name="password" required>
+                </div>
+                <div style="width: 25px;"></div>
+                <div class="labeldiv">   
+                    <label class="labelform" for="password">Confirmar Senha:</label>
+                    <input class="inputform" type="password" id="confirmpassword" name="confirmpassword" required>
+                </div>
+            </div>
+            <div class="labeldiv">   
+                <label class="labelform" for="CPF">CPF:</label>
+                <input class="inputform" type="CPF" id="CPF" name="CPF" required>
+            </div>
+            <div style="display: flex; flex-direction: row;">
+                <div class="labeldiv">
+                    <label class="labelform"  for="first_name">Nome:</label>
+                    <input class="inputform" type="text" id="first_name" name="first_name" required>
+                </div>
+                <div style="width: 25px;"></div>
+                <div class="labeldiv">
+                    <label class="labelform" for="last_name">Sobrenome:</label>
+                    <input class="inputform" type="text" id="last_name" name="last_name" required>
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: row; align-items: center; justify-content: space-between;">
+                <div class="labeldiv">
+                    <label class="labelform" for="birth_date">Data de Nascimento:</label>
+                    <input class="inputform" type="date" id="birth_date" name="birth_date" required>
+                </div>
+                <div>
+                    <label for="gender">Gênero:</label>
+                    <select id="gender" name="gender" required>
+                        <option value="">Selecione</option>
+                        <option value="M">Masculino</option>
+                        <option value="F">Feminino</option>
+                        <option value="O">Outro</option>
+                    </select>
+                </div>
+            </div>
+            <div style="display: flex; justify-content: center; margin-top: 10px;">
+                <button class="btn" style="background-color: #0F90B5; color: white; margin-right: 30px;" type="submit">Cadastrar</button>
+                <a href="{% url 'login' %}" class="btn">Já tenho conta</a>
+            </div>
+            </form>
+        </div>   
+    </div>
 </div>
+
 {% endblock %}

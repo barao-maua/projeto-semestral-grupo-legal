@@ -3,24 +3,59 @@
 {% load static %}
 
 {% block content %}  
+<div style="width: 100vw; height: 80vh; display: flex; flex-direction: row; justify-content: center;">
+    <div>
+        
+    </div>
+        <div id="painel2">
+            <div style="width: 450px;">
+                <p style="text-align: justify;">
+                    Salus é uma plataforma dedicada ao cuidado, bem-estar e qualidade de vida das pessoas. Nosso objetivo é oferecer um espaço acessível, confiável e humanizado onde você possa encontrar informações de saúde, agendar atendimentos, acompanhar seus exames e cuidar da sua saúde de forma prática e segura. Criado com foco no usuário, o Salus conecta pacientes e profissionais da saúde, promovendo um atendimento mais ágil, eficiente e integrado. Acreditamos que cuidar da saúde vai além de tratar doenças — envolve prevenção, acompanhamento e atenção constante.
+                </p>
+            </div>
+        </div>
+        <div style="margin: 75px;">
+        </div>
+        <div id="painel" style="height: 450px; top: 90px; background: linear-gradient(to top, #F8F9FF 79%, #0F90B5 21%);">
+            <div style="">
+                <img src="/media/logo_white.png" alt="logo" style="height: 40px;">
+            </div>
+            <div style="margin-top: 30px; display: flex; justify-content: space-evenly">
+                <h1 style="color: #0F90B5; font-weight: bold;">Entrar</h1>
+            </div>
+            <div class="line" style="width: 480px; border: solid 2px; margin: 10px; border-color: #0F90B5;">
+            </div>
+            <div class="card-body">
+          {% if form.errors %}
+          <div class="alert alert-error shadow-lg mb-4">
+            <span class="text-xs">
+              {% for field_errors in form.errors.values %}
+                {% for error in field_errors %}{{ error }} {% endfor %}
+              {% endfor %}
+            </span>
+          </div>
+          {% endif %}
+            <form method="POST" action="{% url 'login' %}">
+                {% csrf_token %}
+                <div class="labeldiv">   
+                    <label class="labelform" for="email">Email:</label>
+                    <input class="inputform" type="email" id="email" name="email" required>
+                </div>
+                <div class="labeldiv">   
+                    <label class="labelform" for="CPF">Senha:</label>
+                    <input class="inputform" type="password" id="password" name="password" required>
+                <div style="display: flex; justify-content: space-evenly; margin-top: 10px; align-items: center;">
+                    <button id="signupbtn" style="background-color: #0F90B5; padding: 10px; color: white;;" type="submit">Entrar</button>
+                    <div style="margin: 30px;"></div>
+                    <a href="{% url 'cadastro' %}" class="btn">Criar conta</a>
 
-<div class="text"> 
-    <img src="/media/logo.png" alt="logo" id="logologin">
+                </div>
+            </form>
 
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 1  
-    </p>
+            </div>   
+        </div>
+        
 </div>
-<div class="loginform">
-    <h1>Login</h1>
-    <form>
-    <label for="nome">Uusário:</label>
-      <input type="text" id="email" name="email" placeholder="CPF/Email" required>
-      <label for="senha">Senha:</label>
-      <input type="password" id="senha" name="senha" placeholder="Senha" required>
-      <button type="submit" class="entrar">Entrar</button>
-      <a href="#" class="esqueci-senha">Esqueci minha senha</a>
-    </form>
-</div>
-  
+
+
 {% endblock %}

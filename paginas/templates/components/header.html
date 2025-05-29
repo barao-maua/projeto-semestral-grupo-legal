@@ -17,12 +17,24 @@
       <div style="align-items: center; margin-left: 200px;">
         <nav style="display: flex; justify-content: center;align-items: center;">
           <ul class="nav-list" style="display: flex; gap: 30px; align-items: center;">
-            <li><a href="{% url 'index' %}">Página Inicial</a></li>
-            <li><a href="/">Dúvidas</a></li>
-            <li><a href="{% url 'login' %}">Entrar</a></li>
-            <li><a href="{% url 'cadastro' %}">Cadastre-se</a></li>
+            <div class="nav-div">
+              <li><a class="nav-item" href="{% url 'index' %}">Página Inicial</a></li>
+            </div>
+            
+            <div class="nav-div">
+              <li><a class="nav-item" href="/">Dúvidas</a></li>
+            </div>
+            
+            <div class="nav-div">
+              <li><a class="nav-item" href="{% url 'login' %}">Entrar</a></li>
+            </div>
+            
+            <div class="nav-div">
+              <li><a class="nav-item" href="{% url 'cadastro' %}">Cadastre-se</a></li>
+            </div>
           </ul>
         </nav>
+        
       </div>
     </div>
   </div>

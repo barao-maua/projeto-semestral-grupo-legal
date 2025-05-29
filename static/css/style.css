@@ -19,17 +19,7 @@ header {
     align-items: center;
     justify-content: space-between;
 }
-.labelform{
-    margin: 0;
-    padding: 0;
-}
-.inputform{
-    margin: 0;
-    padding: 0;
-    border-radius: 20px;
-    height: 40px
-    box-sizing: 0;
-}
+
 #eulogo {
     max-height: 5vh;
     width: auto;
@@ -58,7 +48,6 @@ header {
 .nav-list li a:hover {
     opacity: 0.5;
 }
-
 .button-container {
     display: flex;
     gap: 20px;
@@ -66,10 +55,8 @@ header {
 }
 
 .button-container button {
-    background-color: white;
     color: #0F90B5;
-    border: 2px solid #0F90B5;
-    /*border-radius: 30px;*/
+    border: 1px solid #0F90B5;
     padding: 8px 60px;
     font-size: 14px;
     font-weight: bold;
@@ -89,7 +76,7 @@ header {
 
 .button-container button:hover {
     background-color: #0F90B5;
-    color: white;
+    color: #C8EAF4;
 }
 
 .button-container button:before {
@@ -103,9 +90,6 @@ header {
     transition: width 0.3s ease-in-out;
 }
 
-.button-container button:hover:before {
-    width: 35px;
-}
 
 .button-container button:hover span {
     margin-left: 10px;
@@ -123,15 +107,6 @@ footer {
     font-weight: bold;
 }
 
-.text{
-    display: flex;
-    flex-direction: column;
-   /* position: fixed;*/
-    left: 15%;
-    top: 20%;
-    width: 500px;
-    height: 100px;
-}
 #logologin{
     margin-bottom: 50px;
 }
@@ -201,62 +176,127 @@ footer {
   h1{
     font-size: 25px;
   }
-  .cadastro-container {
-    font-family: 'Montserrat', sans-serif;
+
+
+.button-services button {
+    background-color: #0F90B5;
+    color: white;
+    /*border-radius: 30px;*/
+    padding: 40px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor:pointer;
+    overflow: hidden;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+.button-services button span {
+    margin-left: 0;
+    transition: margin-left 0.3s;
+}
+
+.button-services button:hover {
+    background-color: hwb(193 33% 22%);
+    color: white;
+}
+
+
+.button-services button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    transition: width 0.3s ease-in-out;
+}
+
+
+.button-services button:hover:before {
+    width: 35px;
+}
+
+.button-services button:hover span {
+    margin-left: 10px;
+}
+.buttons{
+    width: 100%;
+    background-color: white;
+}
+.lines{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+.line{
+    border-color: white;
+    background-color: #0F90B5;
+    border: solid 3px;
+}
+.labeldiv{
     display: flex;
     flex-direction: column;
-    /*position: fixed;*/
-    right: 15%;
-    top: 20%;
-    width: 500px;
-    height: auto;
-    padding: 20px;
-    background-color: #F0F0F0;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.labelform{
+
+}
+.inputform{
+    margin: 0;
+    padding: 0;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    align-items: center;
-    justify-content: center;
+    height: 40px;
+    max-width: 500px;
 }
-
-.cadastro-container h2 {
-    font-size: 25px;
-    margin-bottom: 20px;
+.inputform:focus{
+    outline: solid 2px #0F90B5;
 }
-
-.cadastro-container input {
-    margin-bottom: 15px;
-    margin-top: 10px;
-    padding: 10px;
-    font-size: 16px;
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 100%;
-}
-
-.cadastro-container button {
-    margin-top: 20px;
-    padding: 12px;
-    background-color: white;
-    color: #2D8999;
-    font-size: 16px;
-    border: #2D8999;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-.cadastro-container button:hover {
-    transition: background-color 0.3s, color 0.3s;
+#signupbtn{
+    background-color: #0F90B5;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     color: white;
-    background-color: #2D8999;
+    font-size: 20px;
+    cursor:pointer;
+    overflow: hidden;
+    transition: background-color 0.3s, color 0.3s;
 }
-
-.cadastro-container label {
-    font-weight: bold;
-    width: 100%;
-    text-align: left;
-    margin-top: 10px;
+#signupbtn:hover {
+    background-color: hwb(193 33% 22%);
+    color: white;
+}
+#painel{
+    
+    border-radius: 16px;
+    padding: 32px;
+    position: relative;
+    top: 25px; 
+    max-height: 630px; 
+    box-shadow: 0 0 50px #00000050; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    width: 550px; 
+    border-radius: 10px; 
+    font-family: 'Montserrat', sans-serif
+}
+#painel2{
+    margin-top: 130px;
+    background-color: #F8F9FF;
+    border-radius: 16px;
+    padding: 32px;
+    position: relative;
+    top: 25px; 
+    box-shadow: 0 0 50px #00000050; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    width: 500px; 
+    height: 340px;
+    border-radius: 10px; 
+    font-family: 'Montserrat', sans-serif
 }
